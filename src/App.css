@@ -1,38 +1,536 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+
 .App {
-  text-align: center;
+  text-align: left;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.container {
+  max-width: 1300px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+/* HEADER */
+
+.header {
+  height: 50px;
+  width: 100%;
+  background-color: #292b2d;
+  color: #fcd765;
+  text-align: left;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  padding-top: 20px;
+  padding-left: 20px;
+  position: fixed;
+  top: 0px;
+}
+
+/*PAGE CONTENT*/
+
+.page-content{
+  margin-top: 80px
+}
+
+
+
+
+
+/* SIDENAV */
+#wrapper {
+  overflow-x: hidden;
+  position: fixed;
+  border: none;
+  z-index: 100;
+  background-color: #292b2d;
+}
+
+#sidebar-wrapper a:hover {
+  color: #f1f1f1;
+  font-size: 27px;
+  transition: font-size .16s;
+}
+
+#sidebar-wrapper {
+  color: #fcd765;
+  font-family:  'Montserrat', sans-serif;
+  background-color: #292b2d;
+  border: none;
+min-height: 100vh;
+margin-left: -20rem;
+-webkit-transition: margin .25s ease-out;
+-moz-transition: margin .25s ease-out;
+-o-transition: margin .25s ease-out;
+transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper a {
+  padding: 6px 6px 25px 32px;
+  text-decoration: none;
+  font-weight: 600;
+  border:none;
+  font-size: 25px;
+  background-color: #292b2d;
+  display: block;
+  color: #fcd765;
+  font-family:  'Montserrat', sans-serif;
+}
+
+.nav-counter {
+  margin-right: 10px;
+}
+
+
+#sidebar-wrapper .sidebar-heading {
+padding: 0.875rem 1.25rem;
+font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+width: 20rem;
+}
+
+#page-content-wrapper {
+min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+margin-left: 0;
+}
+
+@media (min-width: 768px) {
+#sidebar-wrapper {
+  margin-left: 0;
+}
+
+#page-content-wrapper {
+  min-width: 0;
+  width: 100%;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: -20rem;
+}
+}
+
+#head-menu-toggle{
+  float: right;
+  margin-right: 20px;
+  background-image: url("./images/menu.png");
+  border: none;
+  background-color: #292b2d;;
+}
+
+@media (min-width: 768px) {
+  #head-menu-toggle {
+    display: none;
+  }
+ 
+  #wrapper.toggled #sidebar-wrapper{
+    margin-left: 0rem;
+  }
+  #wrapper {
+    padding-top: 31px;
+    }
+
+}
+
+  @media (max-width: 768px) {
+ 
+  #wrapper {
+    margin-top: -31px;
+    padding-top: 31px;
+    }
+
+
+} 
+
+
+
+/* PROFILE */
+
+
+.profile {
+ width: 400px;
+ 
+}
+
+.profile-img{
+  margin-top: 50px;
+  border-radius: 50%;
+
+  border: solid #fcd765;
+  width: 200px;
+  
+}
+
+.profile-name{
+  color: #fcd765;
+  font-size: 100px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+
+
+/*ABOUT*/
+
+.about{
+  color: #fcd765;
+  font-family:  'Montserrat', sans-serif;
+}
+
+.about h1 {
+  font-size: 60px;
+  font-weight: 900;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
+
+/*MY SERVICES*/
+
+.card-counter{
+  display: block;
+  margin-bottom: 2rem;
+  line-height: 1;
+  font-size: 56px;
+  font-size: 4rem;
+  color: rgb(255, 251, 140);
+  font-weight: 800;
+}
+
+.card-counter:before {
+  content: "#";
+  font-size: 42px;
+  font-size: 3rem;
+}
+
+.servTitle {
+  padding-left: 0;
+}
+
+.servCount {
+  padding-left: 0;
+}
+
+
+.servCard{
+  padding-top: 30px;
+  color:#fcd765
+}
+
+.servCard h2{
+  padding-bottom: 10px;
+}
+
+#section3 h1 {
+  color: #fcd765;
+  font-size: 60px;
+  font-weight: 900;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  font-family:  'Montserrat', sans-serif;
+}
+
+
+/*SKILLS*/
+
+.skills{
+  color: #fcd765;
+  font-family:  'Montserrat', sans-serif;
+}
+
+.skills h1{
+  
+  font-size: 60px;
+  font-weight: 900;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.skillbar {
+  padding-bottom: 60px;
+}
+
+.skill-name {
+  padding-bottom: 15px;
+}
+
+.progress{
+  height: 5px;
+  padding-left: 0;
+  background-color: #fcd76573;
+}
+
+.progress-bar {
+  width: 65%;
+  height: 6px;
+  background-color: #fcd765;
+}
+
+
+/*EXPERIENCES*/
+
+.exper{
+  color: #fcd765;
+  font-family:  'Montserrat', sans-serif;
+}
+
+.exper h1{
+  font-size: 60px;
+  font-weight: 900;
+  padding-top: 60px;
+  padding-bottom: 70px;
+}
+
+
+.timeline {
+  position: relative;
+  overflow: hidden;
+  padding-left: 1px;
+}
+
+
+.timeline-item {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 5rem;
+}
+
+
+div {
+  display: block;
+}
+
+
+
+.timeline-date {
+  display: block;
+  margin-bottom: 1rem;
+  color:#fcd765a6;
+  font-size: 12.25px;
+  font-size: .875rem;
+}
+
+
+.timeline-title {
+  font-size: 31.5px;
+  font-size: 2.25rem;
+  margin-bottom: .5rem;
+  font-weight: 600;
+}
+
+.timeline-text {
+  margin-bottom: 0;
+}
+
+
+
+
+/*PROJECTS*/
+.proj{
+  color: #fcd765;
+  font-family:  'Montserrat', sans-serif;
+}
+
+.proj h1{
+  
+  font-size: 60px;
+  font-weight: 900;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.proj a {
+  text-decoration: none;
+  color: #fcd765;
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 33px;
+}
+
+.card-subtitle {
+  font-size: 17px;
+  color: #fcd765b3;
+  padding-bottom: 29px;
+}
+
+.card-tags {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.card-img-top {
+  height: 200px;
+  margin-bottom: 12px;
+}
+
+.card-body{
+  padding-left: 0;
+}
+
+
+/*TESTIMONIALS*/
+.testim{
+  color: #fcd765;
+  font-family:  'Montserrat', sans-serif;
+}
+
+.testim h1{
+  
+  font-size: 60px;
+  font-weight: 900;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+
+/*CONTACTS*/
+.cont{
+  color: #fcd765;
+  font-family:  'Montserrat', sans-serif;
+}
+
+.cont h1{
+  
+  font-size: 60px;
+  font-weight: 900;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.cont h3 {
+  font-size: 20px;
+  margin-bottom: 24px;
+  font-weight: 600;
+  color: #fcd765ba;
+}
+
+.cont a, p {
+  text-decoration: none;
+  color:#fcd765;
+  font-size:25px;
+}
+
+
+
+/*sections*/
+#section8 {
+  padding-bottom: 50px;
+}
+#section7 {
+  padding-bottom: 50px;
+}
+#section6 {
+  padding-bottom: 50px;
+}
+#section5 {
+  padding-bottom: 50px;
+}
+#section4 {
+  padding-bottom: 50px;
+}
+#section3 {
+  padding-bottom: 50px;
+}
+
+#section2{
+  padding-bottom: 50px;
+}
+#section1{
+  padding-bottom: 50px;
+}
+
+
+
+.slideDown {
+  
+  width:300px;
+  transition: width 2s;
+}
+.slideUp {
+  width:0;
+ 
+  transition: width 2s;
+}
+
+
+
+
+
+
+.sidenav {
+  height: 100%;
+  width: 320px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  background-color: #292b2d;
+  border: none;
+  overflow-x: hidden;
+  padding-top: 20px;
+  margin-top:50px;
+  
+}
+
+.btn-col{
+  background-color: #292b2d;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  color: #fcd765;
+  font-family:  'Montserrat', sans-serif;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+@media screen and (min-width: 700px) {
+  .sidenav {padding-top: 76px;
+  padding-left:70px
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
